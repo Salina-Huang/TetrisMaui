@@ -1,0 +1,64 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x ="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TetrisMaui.MainPage"
+             BackgroundColor="#D0DBF6">
+
+    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid RowDefinitions="Auto,*" Padding="20" Margin="0,0,0,20">
+            <Label Text="俄罗斯方块" FontSize="28" HorizontalOptions="Center" TextColor="#34354B" />
+
+        <Grid ColumnDefinitions="2*,1.5*" Row="1" Margin="20,10,100,0" ColumnSpacing="10">
+
+            <!-- 游戏区 -->
+            <GraphicsView x:Name="gameView"
+                          Grid.Column="0"
+                          Drawable="{Binding Drawable}"
+                          WidthRequest="300"
+                          HeightRequest="600"
+                          BackgroundColor="#D0DBF6"
+                          HorizontalOptions="Center" />
+
+            <VerticalStackLayout Grid.Column="1" Spacing="15" HorizontalOptions="Start" Margin="10,0,0,0">
+                    <Border Stroke="#7299FD" StrokeThickness="2" Padding="5" >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12" />
+                        </Border.StrokeShape>
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="下一个：" FontSize="18"  TextColor="#34354B"/>
+            <GraphicsView x:Name="nextView"
+                  HeightRequest="120"
+                  WidthRequest="120"
+                  Drawable="{Binding PreviewDrawable}"
+                  BackgroundColor="#34354B" 
+                           HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Label x:Name="scoreLabel"
+                       Text="得分：0"
+                       FontSize="20"
+                       TextColor="#34354B"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0" />
+
+                <VerticalStackLayout Spacing="10">
+                <Button x:Name="pauseButton"
+            Text="暂停"
+        Clicked="OnPauseClicked"
+        FontSize="20"
+        WidthRequest="100"
+        HorizontalOptions="Center"
+        Margin="0,50,0,50"
+        BackgroundColor="#7299FD"/>
+
+            <Button Text="重新开始"
+            Clicked="OnRestartClicked"
+            FontSize="18"
+            WidthRequest="100" 
+             BackgroundColor="#7299FD"/>
+        </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+    </HorizontalStackLayout>
+</ContentPage>
