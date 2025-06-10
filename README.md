@@ -14,10 +14,10 @@ TetrisMaui is a modern, lightweight, and interactive implementation of the class
 
 - **User Interaction**
   - **Keyboard Controls**:
-    - `¡û` : Move Left
-    - `¡ú` : Move Right
-    - `¡ý` : Accelerate Down
-    - `¡ü` or `R` : Rotate
+    - `â†˜` : Move Left
+    - `â†™` : Move Right
+    - `âˆ£` : Accelerate Down
+    - `âˆ¥` or `R` : Rotate
   - **Buttons**:
     - Pause the game
     - Restart the game
@@ -54,12 +54,12 @@ Layout Structure:
 
 ## Project Structure
 TetrisMaui/
-©À©¤©¤ MainPage.xaml             
-©À©¤©¤ MainPage.xaml.cs        
-©À©¤©¤ GameDrawable.cs          
-©À©¤©¤ PreviewDrawable.cs        
-©À©¤©¤ Resources/               
-©¸©¤©¤ App.xaml / App.xaml.cs 
+MainPage.xaml             
+MainPage.xaml.cs        
+GameDrawable.cs          
+PreviewDrawable.cs        
+Resources/               
+App.xaml / App.xaml.cs 
 
 ### Prerequisites
 
